@@ -25,7 +25,6 @@ function fetchPokemon(id) {
     .then((res) => res.json())
     .then((data) => {
       createPokemon(data);
-      //console.log(data);
       spinner.style.display = "none";
     });
 }
@@ -82,7 +81,7 @@ function progressBars(stats) {
   const statsContainer = document.createElement("div");
   statsContainer.classList.add("stats-container");
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 4; i++) {
     const stat = stats[i];
 
     const statPercent = stat.base_stat / 2 + "%";
