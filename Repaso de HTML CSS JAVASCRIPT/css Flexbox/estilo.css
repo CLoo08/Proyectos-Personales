@@ -1,0 +1,51 @@
+body{
+    background-color: beige;
+}
+
+.flex-container{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 20px;
+    display: flex;  
+    flex-flow: row wrap;
+    justify-content: center;  
+    align-content: center;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;   
+    /*flex-direction: row;
+    flex-wrap: wrap;*/ /*El flex-flow es la fusión del flex-direction con el flex-wrap*/
+}
+
+.caja{
+    border: 1px solid rgb(70, 69, 69);
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 5px;
+    overflow: hidden;
+    /*float: left;*/
+}
+
+.c1{
+    background: lightblue;
+    order: 2; /*Cambiar el orden de los elementos*/
+    flex-grow: 1; /*Prioridad de anchura*/
+    flex-basis: 50%; /*Es lo mismo que poner un width, ocupa x% de la caja, al tener flex-grow no es exactamente ese porcentaje*/
+}
+
+.c2{
+    background: lightcoral;
+    order: 1;
+    flex-grow: 3; /*Al tener c2 más prioridad que c3 es un poco más grande, si tuvieran la misma prioridad fueran del mismo tamaño*/
+}
+
+.c3{
+    background: lightgreen;
+    order: 3;
+    flex-grow: 1;
+}

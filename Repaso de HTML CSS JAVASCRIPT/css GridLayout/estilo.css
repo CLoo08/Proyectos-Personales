@@ -1,0 +1,70 @@
+body{
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.grid-layout{
+    height: 650px;
+    display: grid; /*Paso 1: Usar display grid para poder hacer un grid layout*/
+    /*grid-template-columns: 80% auto; /*Tamaño o espacio que ocupa una columna*/
+    /*grid-template-rows: 20% 10% 60% auto; /*Tamaño o espacio que ocupa una fila*/
+    /*justify-content: stretch; /*Manipular el espacio entre cajas*/
+    /*width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    */
+    grid-template-areas: 'cabecera cabecera'   /*Especificar cuantas columnas va a ocupar un elemento en base a las veces que se repite su nombre, según la cantidad de columnas que tenemos y */
+                         'lateral menu'
+                         'lateral contenido'
+                         'footer footer';
+    grid-template-rows: 20% 10% auto 10%;
+    background-color: lightgreen;
+    border: 1px solid black;
+}
+
+.caja{
+    border: 4px solid black;
+    background: lightblue;
+    text-align: center;
+    padding: 20px;
+    /*line-height: 150px;*/
+}
+
+.c1{
+    /*grid-column: 1/4;*/
+    /*grid-row: 1/span 2;*/
+    /*grid-area: 1/1/3/4;*/ /*Línea 1, fila 1, se expanda hasta 3 en fila y se expandna hasta la linea 4 en columna*/
+    /*grid-column: 1 / span 2;*/
+    grid-area: cabecera;
+    background-color: lightskyblue;
+}
+
+.c2{
+    /*grid-column: 1/span 2;*/
+    grid-area: menu;
+    background-color: orange;
+}
+
+.c3{
+    /*grid-column: 3/4;*/
+    grid-area: contenido;
+    background-color: lightsalmon;
+}
+
+.c4{
+    grid-area: lateral;
+    background-color: lightcyan;
+}
+
+.c5{
+    /*grid-column: 1/span 2;*/
+    grid-area: footer;
+    background-color: lightgoldenrodyellow;
+}
+
+.c12{
+    /*grid-column: 1/span 3;*/ /*span palabra para indicar cuantas columnas se va a expandir esa celda*/
+    background-color: blueviolet;
+}
+
